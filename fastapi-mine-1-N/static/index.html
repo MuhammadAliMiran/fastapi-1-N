@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Similarity</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Face Similarity API</h1>
+        
+        <h2>Compare Face</h2>
+        <form id="compare-face-form">
+            <label for="compare-face-file">Upload Image:</label>
+            <input type="file" id="compare-face-file" name="file" accept="image/*" required>
+            
+            <button type="submit">Compare Face</button>
+        </form>
+
+        <h2>Or Take a Live Photo</h2>
+        <button id="open-camera">Open Camera</button>
+        <video id="camera" width="320" height="240" autoplay style="display:none;"></video>
+        <button id="take-photo" style="display:none;">Take Photo</button>
+        <canvas id="photo-canvas" style="display:none;"></canvas>
+
+        <div id="result"></div>
+        <div id="images">
+            <img id="uploaded-img" src="" alt="Uploaded Image" style="display:none;">
+            <img id="similar-img" src="" alt="Most Similar Image" style="display:none;">
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
